@@ -34,6 +34,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -41,6 +42,7 @@
         "show_text_box": false,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
+        "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
@@ -48,9 +50,10 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
-        "heading_size": "h2",
+        "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -63,6 +66,7 @@
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -72,10 +76,63 @@
         "padding_top": 28,
         "padding_bottom": 36
       }
+    },
+    "3c66b5c7-4d99-4624-8ed8-b707df59d55a": {
+      "type": "featured-products",
+      "blocks": {
+        "ae6558fc-c699-435b-9841-3caf4d0d20b8": {
+          "type": "product",
+          "settings": {
+            "product": "cloudburst-gel-hydrator",
+            "stars": 4,
+            "reviews": "15 reviews"
+          }
+        },
+        "c0537412-9264-489e-b7ec-289074c1e0ce": {
+          "type": "product",
+          "settings": {
+            "product": "sunstone-hair-elixir",
+            "stars": 5,
+            "reviews": "15 reviews"
+          }
+        },
+        "22dd7b20-ad54-4b22-ba44-9c27a23ea331": {
+          "type": "product",
+          "settings": {
+            "product": "love-your-body-collection",
+            "stars": 3,
+            "reviews": "15 reviews"
+          }
+        },
+        "a9f43481-12d8-4f68-ab5a-2f6c6cb11784": {
+          "type": "product",
+          "settings": {
+            "product": "superbloom-palette",
+            "stars": 4,
+            "reviews": "15 reviews"
+          }
+        }
+      },
+      "block_order": [
+        "ae6558fc-c699-435b-9841-3caf4d0d20b8",
+        "c0537412-9264-489e-b7ec-289074c1e0ce",
+        "22dd7b20-ad54-4b22-ba44-9c27a23ea331",
+        "a9f43481-12d8-4f68-ab5a-2f6c6cb11784"
+      ],
+      "settings": {
+        "title": "Shop the Marketplace",
+        "description": "<p>We go out of our way to source products that are vegan, cruelty-free and free from most common toxins.<\/p>",
+        "button_title": "SHOP ALL",
+        "button_link": "shopify:\/\/collections\/all",
+        "full_width": false,
+        "show_vendor": true,
+        "enable_quick_add": true
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "3c66b5c7-4d99-4624-8ed8-b707df59d55a"
   ]
 }
