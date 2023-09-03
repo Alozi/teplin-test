@@ -68,14 +68,20 @@
   padding-right: 2.4rem;
 }
 
+.mega-menu__link {
+  transition: all 0.2s ease-out;
+}
+
 .mega-menu__link:hover,
 .mega-menu__link--active {
   color: rgb(var(--color-foreground));
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  font-weight: 700 !important;
 }
 
 .mega-menu__link--active:hover {
-  text-decoration-thickness: 0.2rem;
+  /* text-decoration-thickness: 0.2rem; */
+  font-weight: 700 !important;
 }
 
 .mega-menu .mega-menu__list--condensed {

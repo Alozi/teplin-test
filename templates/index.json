@@ -128,11 +128,46 @@
         "show_vendor": true,
         "enable_quick_add": true
       }
+    },
+    "45691c34-0569-420b-9001-0d590133a027": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/186d29159e8285916f16c826c00b6b73.jpg",
+            "heading": "testimonials",
+            "text": "“Vivamus feugiat lectus et augue vulputate egestas quis ullamcorper orci. Curabitur euismod lobortis”",
+            "author": "John S.",
+            "author_text": "Obsessed about light"
+          }
+        },
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5838c7e7a978e04c3f252617ec419df7.png",
+            "heading": "Image slide",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "author": "",
+            "author_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-1",
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-2"
+      ],
+      "settings": {
+        "heading": "",
+        "layout": "grid",
+        "slider_loop": false
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "3c66b5c7-4d99-4624-8ed8-b707df59d55a"
+    "3c66b5c7-4d99-4624-8ed8-b707df59d55a",
+    "45691c34-0569-420b-9001-0d590133a027"
   ]
 }
