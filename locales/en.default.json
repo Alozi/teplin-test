@@ -273,7 +273,8 @@
       "cart_count": {
         "one": "{{ count }} item",
         "other": "{{ count }} items"
-      }
+      },
+      "shop_all": ""
     },
     "cart": {
       "title": "Your cart",
