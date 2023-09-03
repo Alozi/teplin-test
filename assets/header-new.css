@@ -1,0 +1,36 @@
+/* .header {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.header__menu-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+} */
+
+.header-custom__subnav-title {
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.header-custom__subnav-link {
+  font-style: italic;
+  text-decoration: none;
+  font-weight: 400 !important;
+}
+
+.mega-menu__content {
+  height: 0;
+  padding: 0 !important;
+}
+
+.mega-menu[open] .mega-menu__content {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+  padding-bottom: 3rem !important;
+  padding-top: 3rem !important;
+  z-index: 100;
+  top: 70% !important;
+}

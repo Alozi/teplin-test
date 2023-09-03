@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "3c66b5c7-4d99-4624-8ed8-b707df59d55a": {
+      "type": "featured-products",
+      "blocks": {
+        "ae6558fc-c699-435b-9841-3caf4d0d20b8": {
+          "type": "product",
+          "settings": {
+            "product": "cloudburst-gel-hydrator",
+            "stars": 4,
+            "reviews": "15 reviews"
+          }
+        },
+        "c0537412-9264-489e-b7ec-289074c1e0ce": {
+          "type": "product",
+          "settings": {
+            "product": "sunstone-hair-elixir",
+            "stars": 5,
+            "reviews": "15 reviews"
+          }
+        },
+        "22dd7b20-ad54-4b22-ba44-9c27a23ea331": {
+          "type": "product",
+          "settings": {
+            "product": "love-your-body-collection",
+            "stars": 3,
+            "reviews": "15 reviews"
+          }
+        },
+        "a9f43481-12d8-4f68-ab5a-2f6c6cb11784": {
+          "type": "product",
+          "settings": {
+            "product": "superbloom-palette",
+            "stars": 4,
+            "reviews": "15 reviews"
+          }
+        }
+      },
+      "block_order": [
+        "ae6558fc-c699-435b-9841-3caf4d0d20b8",
+        "c0537412-9264-489e-b7ec-289074c1e0ce",
+        "22dd7b20-ad54-4b22-ba44-9c27a23ea331",
+        "a9f43481-12d8-4f68-ab5a-2f6c6cb11784"
+      ],
+      "settings": {
+        "title": "Shop the Marketplace",
+        "description": "<p>We go out of our way to source products that are vegan, cruelty-free and free from most common toxins.<\/p>",
+        "button_title": "SHOP ALL",
+        "button_link": "shopify:\/\/collections\/all",
+        "full_width": false,
+        "show_vendor": true,
+        "enable_quick_add": true
+      }
+    },
+    "45691c34-0569-420b-9001-0d590133a027": {
+      "type": "testimonials",
+      "blocks": {
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/186d29159e8285916f16c826c00b6b73.jpg",
+            "heading": "testimonials",
+            "text": "“Vivamus feugiat lectus et augue vulputate egestas quis ullamcorper orci. Curabitur euismod lobortis”",
+            "author": "John S.",
+            "author_text": "Obsessed about light"
+          }
+        },
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-2": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5838c7e7a978e04c3f252617ec419df7.png",
+            "heading": "Image slide",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "author": "",
+            "author_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-1",
+        "template--20776795767060__45691c34-0569-420b-9001-0d590133a027-slide-2"
+      ],
+      "settings": {
+        "heading": "",
+        "layout": "grid",
+        "slider_loop": false
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "3c66b5c7-4d99-4624-8ed8-b707df59d55a",
+    "45691c34-0569-420b-9001-0d590133a027"
+  ]
+}

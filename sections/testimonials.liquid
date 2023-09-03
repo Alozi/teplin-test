@@ -1,0 +1,180 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'testimonials.css' | asset_url | stylesheet_tag }}
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+<div class="testimonials{% if section.settings.layout == 'grid' %} page-width{% endif %}">
+	{%- if section.settings.heading != blank -%}
+		<h2 class="testimonials__title scroll-trigger animate--slide-in">
+			{{ section.settings.heading }}
+		</h2>
+	{%- endif -%}
+
+	<div class="testimonials__slider swiper mySwiper">
+		<div class="testimonials__wrapper swiper-wrapper  {% if section.blocks.first.settings.image == blank %} slideshow--placeholder{% endif %}">
+			{%- for block in section.blocks -%}
+				<div class="swiper-slide">
+					<div class="testimonials__slide">
+						<div class="testimonials__slide-image {% if block.settings.image == blank %} placeholder{% endif %}">
+							{%- if block.settings.image -%}
+								{{
+              block.settings.image
+              | image_url: width: 3840
+              | image_tag: loading: 'lazy', height: height, sizes: sizes, widths: widths
+            }}
+							{%- else -%}
+								{%- assign placeholder_slide = forloop.index | modulo: 2 -%}
+								{%- if placeholder_slide == 1 -%}
+									{{ 'hero-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+								{%- else -%}
+									{{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+								{%- endif -%}
+							{%- endif -%}
+						</div>
+						<div class="testimonials__slide-text page-width scroll-trigger animate--slide-in">
+							{%- if block.settings.heading != blank -%}
+								<h2 class="testimonials__slide-title">
+									{{ block.settings.heading }}
+								</h2>
+							{%- endif -%}
+							{%- if block.settings.text != blank or block.settings.author_text != blank -%}
+								<div class="testimonials__slide-description">
+									<p>{{ block.settings.text }}</p>
+								</div>
+							{%- endif -%}
+							{%- if block.settings.author != blank -%}
+								<div class="testimonials__slide-author-wrapper">
+									{% render 'icon-quote' %}
+									<div>
+										{%- if block.settings.author != blank -%}
+											<div class="testimonials__slide-author">{{ block.settings.author }}</div>
+										{%- endif -%}
+										{%- if block.settings.author_text != blank -%}
+											<div class="testimonials__slide-author-text">{{ block.settings.author_text }}</div>
+										{%- endif -%}
+									</div>
+								</div>
+							{%- endif -%}
+						</div>
+					</div>
+				</div>
+			{%- endfor -%}
+		</div>
+	</div>
+
+	{%- if section.blocks.size > 1 -%}
+		<div class="swiper-button-next">
+			{% render 'icon-button-next' %}
+		</div>
+		<div class="swiper-button-prev">
+			{% render 'icon-button-prev' %}
+		</div>
+	{%- endif -%}
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+	var swiper = new Swiper(".mySwiper", {
+{%- if section.settings.slider_loop and section.blocks.size > 1 -%}
+loop : true,
+{%- endif -%}
+navigation: {
+nextEl: ".swiper-button-next",
+prevEl: ".swiper-button-prev"
+}
+});
+</script>
+
+{% schema %}
+{
+	  "name": "Testimonials",
+	  "tag": "section",
+	  "class": "section",
+	  "disabled_on": {
+	    "groups": ["header", "footer"]
+	  },
+	  "settings": [
+	    {
+	      "type": "inline_richtext",
+	      "id": "heading",
+	      "label": "Testimonials heading"
+	    },
+	    {
+	      "type": "select",
+	      "id": "layout",
+	      "options": [
+	        {
+	          "value": "full_bleed",
+	          "label": "t:sections.slideshow.settings.layout.options__1.label"
+	        },
+	        {
+	          "value": "grid",
+	          "label": "t:sections.slideshow.settings.layout.options__2.label"
+	        }
+	      ],
+	      "default": "full_bleed",
+	      "label": "t:sections.slideshow.settings.layout.label"
+	    },
+	    {
+	      "type": "checkbox",
+	      "id": "slider_loop",
+	      "label": "Slider loop",
+	      "default": false
+	    }
+	  ],
+	  "blocks": [
+	    {
+	      "type": "slide",
+	      "name": "t:sections.slideshow.blocks.slide.name",
+	      "limit": 5,
+	      "settings": [
+	        {
+	          "type": "image_picker",
+	          "id": "image",
+	          "label": "t:sections.slideshow.blocks.slide.settings.image.label"
+	        },
+	        {
+	          "type": "inline_richtext",
+	          "id": "heading",
+	          "default": "Image slide",
+	          "label": "t:sections.slideshow.blocks.slide.settings.heading.label"
+	        },
+	        {
+	          "type": "inline_richtext",
+	          "id": "text",
+	          "default": "Tell your brand's story through images",
+	          "label": "Text"
+	        },
+	        {
+	          "type": "inline_richtext",
+	          "id": "author",
+	          "label": "Author"
+	        },
+	        {
+	          "type": "inline_richtext",
+	          "id": "author_text",
+	          "label": "Author text"
+	        }
+	      ]
+	    }
+	  ],
+	  "presets": [
+	    {
+	      "name": "Testimonials",
+	      "blocks": [
+	        {
+	          "type": "slide"
+	        },
+	        {
+	          "type": "slide"
+	        }
+	      ]
+	    }
+	  ]
+	}
+{% endschema %}
